@@ -1,0 +1,11 @@
+.scrolled{
+    top: 0px;
+    position: fixed;
+    background-color: lightgreen;
+  }
+
+  .navbar-container{
+    width: 100%;
+    transition: 0.25;
+    height: 60px;
+  }
