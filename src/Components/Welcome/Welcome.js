@@ -8,7 +8,7 @@ class Welcome extends React.Component {
 
     render() {
         return(
-            <div className="welcome-container" id="welcome">
+            <div className="section" id="welcome">
                 <h1>Welcome Component</h1>
             </div>
         )

@@ -4,8 +4,16 @@
     background-color: lightgreen;
   }
 
-  .navbar-container{
-    width: 100%;
-    transition: 0.25;
-    height: 60px;
-  }
+.navbar-container{
+  width: 100%;
+  transition: 2s;
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: plum;
+}
+
+.active-link{
+  background-color: white;
+}

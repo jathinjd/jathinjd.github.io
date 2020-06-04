@@ -8,7 +8,7 @@ class ErrorPage extends React.Component {
 
     render() {
         return(
-            <div className="error404-container" id="error404">
+            <div className="section" id="errorpage">
                 <h1>Error: 4040 Page Not Found</h1>
             </div>
         )

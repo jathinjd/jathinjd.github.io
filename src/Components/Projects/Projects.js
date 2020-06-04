@@ -8,7 +8,7 @@ class Projects extends React.Component {
 
     render() {
         return(
-            <div className="projects-container" id="projects">
+            <div className="section" id="projects">
                 <h1>Projects Component</h1>
             </div>
         )

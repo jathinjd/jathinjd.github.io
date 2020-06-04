@@ -8,7 +8,7 @@ class AboutMe extends React.Component {
 
     render() {
         return(
-            <div className="aboutme-container" id="aboutme">
+            <div className="section" id="aboutme">
                 <h1>AboutMe Component</h1>
             </div>
         )

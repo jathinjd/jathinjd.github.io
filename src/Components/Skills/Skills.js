@@ -8,7 +8,7 @@ class Skills extends React.Component {
 
     render() {
         return(
-            <div className="skills-container" id="skills">
+            <div className="section" id="skills">
                 <h1>Skills Component</h1>
             </div>
         )
