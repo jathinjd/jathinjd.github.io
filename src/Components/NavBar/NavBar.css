@@ -12,8 +12,12 @@
   justify-content: left;
   align-items: center;
   background-color: plum;
+  position: fixed;
+  padding-left: 1em;
+  padding-right: 1em;
+  z-index: 10;
 }
 
-.active-link{
+.navlink-active{
   background-color: white;
 }

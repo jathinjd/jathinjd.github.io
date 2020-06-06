@@ -6,4 +6,10 @@
 .section{
   height: 1400px;
   width: 100%;
+  text-align: center;
+}
+
+.section h1{
+  padding-top: 1em;
+  padding-bottom: 2em;
 }

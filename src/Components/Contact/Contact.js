@@ -7,8 +7,15 @@ class Contact extends React.Component {
     }
 
     render() {
+
+        const useStyles = {
+            sectionClass: {
+                paddingTop: this.props.navbarHeight
+            }
+        }
+
         return(
-            <div className="section" id="contact">
+            <div className="section" id="contact" style={useStyles.sectionClass}>
                 <h1>Contact Component</h1>
             </div>
         )

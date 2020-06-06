@@ -16,6 +16,20 @@ class NavBar extends React.Component {
         this.contactLinkRef = React.createRef();
     }
 
+    componentDidMount(){
+        const activeSectionLinkRef = this.props.activeSection + "LinkRef";
+        this[activeSectionLinkRef].current.getElementsByTagName('a')[0].classList.add('active-link');
+    }
+
+    componentDidUpdate(prevProps){ 
+        if(this.props.activeSection !== prevProps.activeSection){
+            const activeSectionLinkRef = this.props.activeSection + "LinkRef";
+            const prevActiveSectionLinkRef = prevProps.activeSection + "LinkRef";
+            this[prevActiveSectionLinkRef].current.getElementsByTagName('a')[0].classList.remove('active-link');
+            this[activeSectionLinkRef].current.getElementsByTagName('a')[0].classList.add('active-link');
+        }
+    }
+
     render() {
         return(
             <div id="navbar" className="navbar-container">

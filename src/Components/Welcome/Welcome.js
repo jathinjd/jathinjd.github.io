@@ -7,8 +7,16 @@ class Welcome extends React.Component {
     }
 
     render() {
+
+        const useStyles = {
+            sectionClass: {
+                paddingTop: this.props.navbarHeight
+            }
+        }
+
+
         return(
-            <div className="section" id="welcome">
+            <div className="section" id="welcome" style={useStyles.sectionClass}>
                 <h1>Welcome Component</h1>
             </div>
         )

@@ -7,8 +7,15 @@ class AboutMe extends React.Component {
     }
 
     render() {
+
+        const useStyles = {
+            sectionClass: {
+                paddingTop: this.props.navbarHeight
+            }
+        }
+
         return(
-            <div className="section" id="aboutme">
+            <div className="section" id="aboutme" style={useStyles.sectionClass}>
                 <h1>AboutMe Component</h1>
             </div>
         )

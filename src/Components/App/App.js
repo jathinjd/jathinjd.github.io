@@ -11,114 +11,45 @@ import Contact from '../Contact/Contact';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const getElementRange = elementId => {
-    const dimObject = document.getElementById(elementId).getBoundingClientRect();
-    return {
-      top: dimObject.top,
-      bottom: dimObject.bottom,
-    }
-}
-
 const sectionIds = ["welcome", "aboutme", "skills", "education",
                     "experience", "projects", "contact"];
 
 class App extends React.Component {
-  
+
   constructor(props){
     super(props);
-    
     this.state = {
-      welcomeRange: {top: 0, bottom: 0},
-      aboutmeRange: {top: 0, bottom: 0},
-      skillsRange: {top: 0, bottom: 0},
-      educationRange: {top: 0, bottom: 0},
-      experienceRange: {top: 0, bottom: 0},
-      projectsRange: {top: 0, bottom: 0},
-      contactRange: {top: 0, bottom: 0},
-      majoritySection: "welcome",
-      sectionsOnPage: []
+      navbarHeight: 0
     }
-
-    this.loadElementDemarcations = this.loadElementDemarcations.bind(this);
-    this.setSectionsOnPage = this.setSectionsOnPage.bind(this);
-    this.setMajoritySection = this.setMajoritySection.bind(this);
-  }
-
-  loadElementDemarcations(){
-    this.setState({
-      welcome: getElementRange('welcome'),
-      aboutme: getElementRange('aboutme'),
-      skills: getElementRange('skills'),
-      education: getElementRange('education'),
-      experience: getElementRange('experience'),
-      projects: getElementRange('projects'),
-      contact: getElementRange('contact'),
-    })
-  }
-
-  setSectionsOnPage(){
-    const screenHeight = window.innerHeight;
-    const sectionsOnPage = [];
-    sectionsOnPage[0] = sectionIds.filter(sectionId => {
-      const sectionRange = sectionId + "Range";
-      console.log(this.state[sectionRange]);
-      return (this.state[sectionRange].bottom > window.scrollY && 
-        this.state[sectionRange].top < (window.scrollY + screenHeight));
-    });
-    this.state.sectionsOnPage = sectionsOnPage;
-  }
-
-  setMajoritySection(){
-    let curMajoritySection;
-    let maxArea = 0;
-    const screenTop = window.scrollY;
-    const screenBottom = screenTop + window.innerHeight;
-    this.state.sectionsOnPage.forEach((sectionId) => {
-      let onScreenArea;
-      const sectionRange = sectionId + "Range";
-      const sectionTop = this.state[sectionRange].top;
-      const sectionBottom = this.state[sectionRange].bottom;
-      if(sectionTop < screenTop && sectionBottom < screenBottom){
-        onScreenArea = (sectionBottom - screenTop);
-      } else if (sectionTop > screenTop && sectionBottom > screenBottom){
-        onScreenArea = (screenBottom - sectionTop);
-      } else {
-        onScreenArea = (sectionBottom - sectionTop);
-      }
-      if(maxArea < onScreenArea){
-        curMajoritySection = sectionId;
-        maxArea = onScreenArea;
-      }
-    });
-    this.setState({majoritySection: curMajoritySection});
   }
 
   componentDidMount(){
+    this.setState({navbarHeight: document.getElementById('navbar').getBoundingClientRect().height});
+  }
 
-    this.loadElementDemarcations();
+  /*stickNavBar(){
+    const isTop = window.scrollY > document.getElementById('navbar').getBoundingClientRect().height;
+    const nav = document.getElementById('navbar');
+    if(isTop){
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  }
 
-    window.addEventListener('scroll', () => {
-      //For sticky navbar
-      const isTop = window.scrollY > document.getElementById('navbar').getBoundingClientRect().height;
-      const nav = document.getElementById('navbar');
-      if(isTop){
-        nav.classList.add('scrolled');
-      } else {
-        nav.classList.remove('scrolled');
-      }
-    });
-
+  componentDidMount(){
+    window.addEventListener('scroll', this.stickNavBar);
   }
 
   componentWillUnmount(){
     window.removeEventListener('scroll');
-  }
+  }*/
 
   render() {
     return (
       <div className="App">
         <Router>
-            <NavBar className="app-navbar" activeSection={this.state.majoritySection}/>
+            <NavBar className="app-navbar" activeSection={"placeholder"} />
             <Switch>
               <Route exact path="/">
                 {
@@ -127,15 +58,17 @@ class App extends React.Component {
                   //welcome, aboutme, skills, edcation, expreince, projects,
                   //contact, errorpage. Useful for dom manipulation.
                 }
-                <Welcome />
-                <AboutMe />
-                <Skills />
-                <Education />
-                <Experience />
-                <Projects />
-                <Contact />
+                <Welcome navbarHeight={this.state.navbarHeight}/>
+                <AboutMe navbarHeight={this.state.navbarHeight}/>
+                <Skills navbarHeight={this.state.navbarHeight}/>
+                <Education navbarHeight={this.state.navbarHeight}/>
+                <Experience navbarHeight={this.state.navbarHeight}/>
+                <Projects navbarHeight={this.state.navbarHeight}/>
+                <Contact navbarHeight={this.state.navbarHeight}/>
               </Route>
-              <Route path="*" component={ErrorPage} />
+              <Route path="*">
+                <ErrorPage navbarHeight={this.state.navbarHeight}/>
+              </Route>
             </Switch>
         </Router>
         
@@ -144,5 +77,5 @@ class App extends React.Component {
     );
   }
 }
-  
+
 export default App;
