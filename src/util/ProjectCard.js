@@ -9,11 +9,8 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -33,12 +30,9 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-  avatar: {
-    backgroundColor: red[500],
-  },
 }));
 
-function DetailCard(props) {
+function ProjectCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -68,7 +62,7 @@ function DetailCard(props) {
       </CardContent>
       <CardActions disableSpacing>
         <a target="_blank" href="https://www.google.com">
-        <IconButton aria-label="add to favorites">
+        <IconButton>
           <GitHubIcon />
         </IconButton>
         </a>
@@ -101,4 +95,4 @@ function DetailCard(props) {
   );
 }
 
-export default DetailCard;
+export default ProjectCard;

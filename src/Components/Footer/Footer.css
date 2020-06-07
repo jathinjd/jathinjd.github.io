@@ -1,0 +1,23 @@
+.footer-container{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5em;
+    justify-content: space-between;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.footer-social-links a{
+    margin: 0.5em;
+    justify-content: center;
+}
+
+.footer-powered-by{
+    display: flex;
+}
+
+.footer-icon{
+    margin: 0.5em;
+}

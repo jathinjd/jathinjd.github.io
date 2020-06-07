@@ -1,5 +1,48 @@
-#education{
-    background-color: blueviolet;
-    height: 1400px;
+.education-grid-container{
     width: 100%;
+    background-color: pink;
+    margin: 0;
+    justify-content: space-around;
 }
+
+#education{
+    background-color: yellow;
+}
+
+.education-card-content{
+    text-align: left;
+}
+
+.education-card-content ul{
+    padding: 1em;
+}
+
+.education-card{
+    width: 400px;
+    margin: 16px;
+}
+
+.education-card-main{
+    text-align: left;
+}
+
+.education-pndts{
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-card img{
+    height: 300px;
+    width: 300px;
+}
+
+.education-card-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.education-card-bottom span{
+    display: flex;
+    align-items: center;
+}
+

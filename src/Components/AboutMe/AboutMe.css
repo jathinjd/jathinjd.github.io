@@ -1,3 +1,77 @@
 #aboutme{
     background-color: lightcoral;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.aboutme-information{
+    max-width: 400px;
+    min-width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3em;
+    margin-bottom: 1em;
+    justify-content: center;
+    padding: 2em;
+}
+
+.aboutme-information img{
+    margin: 2em;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.aboutme-side{
+    max-width: 800px;
+    min-width: 200px;
+    margin-top: 3em;
+    margin-bottom: 1em;
+}
+
+.aboutme-interests{
+    margin-bottom: 1em;
+}
+
+.aboutme-interests-content{
+    min-width: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+
+.aboutme-interest{
+    height: 180px;
+    width: 180px;
+    margin: 8px;
+}
+
+.aboutme-interest img{
+    height: 100px;
+    width: 100px;
+    margin: 1em;
+}
+
+.aboutme-interest p {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.aboutme-download{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.aboutme-downloads{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+.aboutme-download-button{
+    margin: 1em;
 }

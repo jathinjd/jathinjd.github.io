@@ -8,6 +8,7 @@ import Education from '../Education/Education';
 import Experience from '../Experience/Experience';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
+import Footer from '../Footer/Footer';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -70,6 +71,7 @@ class App extends React.Component {
                 <ErrorPage navbarHeight={this.state.navbarHeight}/>
               </Route>
             </Switch>
+            <Footer />
         </Router>
         
         

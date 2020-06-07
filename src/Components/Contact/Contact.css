@@ -1,3 +1,36 @@
 #contact{
-    background-color: green;
+    display: flex;
+    justify-content: center;
 }
+
+.contact-container{
+    margin-top: 3em;
+    margin-bottom: 3em;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.contact-head{
+    padding: 2em;
+}
+
+.contact-content{
+    text-align: center;
+}
+
+.contact-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em;
+}
+
+.contact-address a{
+    width: 300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: right;
+    color: blue;
+}
+

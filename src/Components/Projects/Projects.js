@@ -1,6 +1,6 @@
 import React from 'react';
 import './Projects.css';
-import DetailCard from '../../util/DetailCard';
+import ProjectCard from '../../util/ProjectCard';
 import Grid from '@material-ui/core/Grid';
 
 class Projects extends React.Component {
@@ -81,7 +81,7 @@ class Projects extends React.Component {
                 <Grid container className = "grid-container">
                     {projectsList.map(project =>
                         <Grid item>
-                            <DetailCard project={project} />
+                            <ProjectCard project={project} />
                         </Grid>
                     )}
                 </Grid>
