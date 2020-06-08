@@ -1,5 +1,4 @@
 #aboutme{
-    background-color: lightcoral;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -19,8 +18,7 @@
 .aboutme-information img{
     margin: 2em;
     height: 300px;
-    width: 300px;
-    border-radius: 50%;
+    border-radius: 1em;
 }
 
 .aboutme-side{
@@ -32,6 +30,7 @@
 
 .aboutme-interests{
     margin-bottom: 1em;
+    padding-top: 1em;
 }
 
 .aboutme-interests-content{
@@ -46,6 +45,7 @@
     height: 180px;
     width: 180px;
     margin: 8px;
+    padding-bottom: 0.5em;
 }
 
 .aboutme-interest img{
@@ -65,11 +65,27 @@
     flex-wrap: wrap;
 }
 
+.aboutme-download-item{
+    text-align: center;
+    padding: 0.5em;
+}
+
 .aboutme-downloads{
     display: flex;
     justify-content: space-evenly;
     padding: 1em;
     flex-wrap: wrap;
+}
+
+.aboutme-downloads a{
+    text-decoration: none;
+}
+
+.aboutme-downloads a img{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 1em;
+    margin: 1em;
 }
 
 .aboutme-download-button{

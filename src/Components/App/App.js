@@ -10,7 +10,8 @@ import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
 import Footer from '../Footer/Footer';
 import ErrorPage from '../ErrorPage/ErrorPage';
-import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const sectionIds = ["welcome", "aboutme", "skills", "education",
                     "experience", "projects", "contact"];
@@ -47,8 +48,22 @@ class App extends React.Component {
   }*/
 
   render() {
+
+    const theme = createMuiTheme({
+      typography: {
+        fontFamily: [
+          'Vollkorn',
+          'serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
+      },
+    });
+
     return (
       <div className="App">
+        <MuiThemeProvider theme={theme}>
         <Router>
             <NavBar className="app-navbar" activeSection={"placeholder"} />
             <Switch>
@@ -59,7 +74,7 @@ class App extends React.Component {
                   //welcome, aboutme, skills, edcation, expreince, projects,
                   //contact, errorpage. Useful for dom manipulation.
                 }
-                <Welcome navbarHeight={this.state.navbarHeight}/>
+                {/*<Welcome navbarHeight={this.state.navbarHeight}/>*/}
                 <AboutMe navbarHeight={this.state.navbarHeight}/>
                 <Skills navbarHeight={this.state.navbarHeight}/>
                 <Education navbarHeight={this.state.navbarHeight}/>
@@ -73,6 +88,7 @@ class App extends React.Component {
             </Switch>
             <Footer />
         </Router>
+        </MuiThemeProvider>
         
         
       </div>

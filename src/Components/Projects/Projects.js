@@ -2,6 +2,8 @@ import React from 'react';
 import './Projects.css';
 import ProjectCard from '../../util/ProjectCard';
 import Grid from '@material-ui/core/Grid';
+import { projectsList } from '../../util/data';
+import Typography from '@material-ui/core/Typography';
 
 class Projects extends React.Component {
     constructor(props) {
@@ -9,65 +11,6 @@ class Projects extends React.Component {
     }
 
     render() {
-
-        const projectsList = [
-            {
-                projectTitle: "Project1 title is long enough to go to next line",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku"],
-                projectLink: "Link here",
-            },
-            {
-                projectTitle: "Project1 title is long enough to go to next line",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku", "React","React", "React","React","React", "React", "React"],
-                projectLink: "Link here",
-            },
-            {
-                projectTitle: "Project1 title is long enough to go to next line",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku"],
-                projectLink: "Link here",
-            },
-            {
-                projectTitle: "Project1 te",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku"],
-                projectLink: "Link here",
-            },
-            {
-                projectTitle: "Project1 title is long enough to go to next line",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku"],
-                projectLink: "Link here",
-            },
-            {
-                projectTitle: "Project1 title is long enough to go to next line",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku"],
-                projectLink: "Link here",
-            },
-            {
-                projectTitle: "Project1 title is long enough to go to next line",
-                projectImageLink: "imageurlhere",
-                projectDescription: "Write a brief desc",
-                projectDetails: ["point1 should be long enough to at last go past one line so I can see how it is", "point", "point"],
-                projectTechnologies: ["React", "Redux", "JavaScript", "Heroku"],
-                projectLink: "Link here",
-            }
-        ];
 
         const useStyles = {
             sectionClass: {
@@ -77,14 +20,14 @@ class Projects extends React.Component {
 
         return(
             <div className="section" id="projects" style={useStyles.sectionClass}>
-                <h1>Projects</h1>
-                <Grid container className = "grid-container">
+                <Typography variant="h4">Projects</Typography>
+                <div className = "projects-content">
                     {projectsList.map(project =>
                         <Grid item>
                             <ProjectCard project={project} />
                         </Grid>
                     )}
-                </Grid>
+                </div>
             </div>
         )
     }

@@ -3,7 +3,6 @@ import './Contact.css';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import EmailIcon from '@material-ui/icons/Email';
@@ -25,8 +24,8 @@ class Contact extends React.Component {
             <div className="section" id="contact" style={useStyles.sectionClass}>
                 <Paper className="contact-container">
                     <div className="contact-head">
-                        <Typography>Contact Me</Typography>
-                        <Typography>I am open to new opportunites, ideas and collaborations. Ping me maybe...</Typography>
+                        <Typography className="conatct-title" variant="h4">Contact Me</Typography>
+                        <Typography>I am open to new opportunites, ideas and feedback. Find me here...</Typography>
                     </div>
                     <div className="contact-content">
                         <div className="contact-item">

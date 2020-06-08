@@ -1,6 +1,12 @@
 import React from 'react';
 import './Skills.css';
-import Paper from '@material-ui/core/Paper'
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { mainSkillsList, skillsList, otherSkillsList } from '../../util/data';
 
 class Skills extends React.Component {
     constructor(props) {
@@ -8,70 +14,6 @@ class Skills extends React.Component {
     }
 
     render() {
-
-        const skillsList = [
-            {
-                skillsCategory: "Languages",
-                skillsCategoryList: [
-                    {skillName: "Java", imageName: "java"},
-                    {skillName: "JavaScript", imagename: "javascript"},
-                    {skillName: "SQL", imagename: "sql"},
-                    {skillName: "Python", imagename: "python"},
-                    {skillName: "R", imagename: "r"}
-                ],
-            },
-            {
-                skillsCategory: "Databases",
-                skillsCategoryList: [
-                    {skillName: "MySQL", imageName: "mysql"},
-                    {skillName: "MongoDB", imagename: "mongodb"},
-                    {skillName: "MariaDB", imagename: "mariadb"},
-                    {skillName: "SQLite", imagename: "sqlite"},
-                    {skillName: "Microsoft SQL Server", imagename: "mssqlserver"}
-                ],
-            },
-            {
-                skillsCategory: "Web Technologies",
-                skillsCategoryList: [
-                    {skillName: "React", imageName: "react"},
-                    {skillName: "Express.js", imagename: "expressjs"},
-                    {skillName: "HTML", imagename: "html"},
-                    {skillName: "CSS", imagename: "css"},
-                    {skillName: "Flask", imagename: "flask"},
-                    {skillName: "Node.js", imagename: "nodejs"}
-                ],
-            },
-            {
-                skillsCategory: "Cloud Technologies",
-                skillsCategoryList: [
-                    {skillName: "AWS", imageName: "aws"},
-                    {skillName: "Apache Spark", imagename: "apachespark"},
-                    {skillName: "Map Reduce", imagename: "mapreduce"},
-                    {skillName: "HBase", imagename: "hbase"}
-                ],
-            },
-            {
-                skillsCategory: "Tools I Use",
-                skillsCategoryList: [
-                    {skillName: "Git", imagename: "git"},
-                    {skillName: "Bash / Command Line", imagename: "bash"},
-                    {skillName: "Tableau", imageName: "tableau"},
-                    {skillName: "Visual Studio Code", imageName: "vscode"},
-                    {skillName: "IntelliJ IDEA", imagename: "intellijidea"},
-                    {skillName: "PyCharm", imagename: "pycharm"},
-                    {skillName: "Microsoft Office", imageName: "msoffice"},
-                ],
-            },
-            {
-                skillsCategory: "Other skilss",
-                skillsCategoryList: [
-                    {skillName: "AWS", imageName: "aws"},
-                    {skillName: "Apache Spark", imagename: "html"},
-                    {skillName: "Map Reduce", imagename: "css"},
-                    {skillName: "HBase", imagename: "hbase"}
-                ],
-            },
-        ]
 
         const useStyles = {
             sectionClass: {
@@ -81,10 +23,67 @@ class Skills extends React.Component {
 
         return(
             <div className="section" id="skills" style={useStyles.sectionClass}>
-                <h1>Skills Component</h1>
-                <Paper>
-
-                </Paper>
+                <div className="skills-container">
+                    <Typography variant="h4">Skills</Typography>
+                    <div className="skills-content">
+                        {mainSkillsList.map(skillsCategory => 
+                            <Paper className="skills-section">
+                                <Typography variant="h6" className="skills-category-name">{skillsCategory.skillsCategoryName}</Typography>
+                                <div className="skills-items">
+                                    {skillsCategory.skillsCategoryList.map(skillsItem =>
+                                        <div className="skills-item">
+                                            <img 
+                                                src={require("../../images/technologies/" + skillsItem.skillImageName + ".svg")}
+                                                alt={skillsItem.skillName}
+                                            />
+                                            <Typography>{skillsItem.skillName}</Typography>
+                                        </div>
+                                    )}
+                                </div>
+                            </Paper>
+                        )}
+                        {skillsList.map(skillsCategory => 
+                            <Paper className="skills-section">
+                                <Typography variant="h6" className="skills-category-name">{skillsCategory.skillsCategoryName}</Typography>
+                                <div className="skills-items">
+                                    {skillsCategory.skillsCategoryList.map(skillsItem =>
+                                        <div className="skills-item">
+                                            <img 
+                                                src={require("../../images/technologies/" + skillsItem.skillImageName + ".svg")}
+                                                alt={skillsItem.skillName}
+                                            />
+                                            <Typography>{skillsItem.skillName}</Typography>
+                                        </div>
+                                    )}
+                                </div>
+                            </Paper>
+                        )}
+                        {otherSkillsList.map(skillsCategory => 
+                            <ExpansionPanel className="skills-section">
+                                <ExpansionPanelSummary
+                                    expandIcon={<ExpandMoreIcon />}
+                                    aria-controls="panel1a-content"
+                                    id="panel1a-header"
+                                >
+                                    <Typography variant="h6" className="skills-category-name">{skillsCategory.skillsCategoryName}</Typography>
+                                </ExpansionPanelSummary>
+                                <ExpansionPanelDetails>
+                                    <div className="skills-items">
+                                        {skillsCategory.skillsCategoryList.map(skillsItem =>
+                                            <div className="skills-item">
+                                                <img 
+                                                    src={require("../../images/technologies/" + skillsItem.skillImageName + ".svg")}
+                                                    alt={skillsItem.skillName}
+                                                />
+                                                <Typography>{skillsItem.skillName}</Typography>
+                                            </div>
+                                        )}
+                                    </div>
+                                </ExpansionPanelDetails>
+                            </ExpansionPanel>
+                        )}
+                    </div>
+                </div>
             </div>
         )
     }

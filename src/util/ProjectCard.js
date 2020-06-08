@@ -45,26 +45,28 @@ function ProjectCard(props) {
       <CardHeader className="card-header"
         title={props.project.projectTitle}
       />
-      <CardMedia
-        className={classes.media}
-        image={props.project.projectImageLink}
-        title={props.project.projectTitle}
-      />
+      <a target="_blank" rel="noopener noreferrer" href={props.project.projectLink}>
+        <CardMedia
+          className={classes.media}
+          image={require("../images/projects/" + props.project.projectImageName + ".jpg")}
+          title={props.project.projectTitle}
+        />
+      </a>
       <CardContent>
         <div className="card-technology-icons">
-            {props.project.projectTechnologies.map((technology) =>
+            {props.project.projectTechnologiesImageName.map((technology) =>
                 <img 
-                    src={require("../images/technologies/" + technology + "-icon.svg")}
+                    src={require("../images/technologies/" + technology + ".svg")}
                     alt={technology}
                 />
             )}
         </div>
       </CardContent>
       <CardActions disableSpacing>
-        <a target="_blank" href="https://www.google.com">
-        <IconButton>
-          <GitHubIcon />
-        </IconButton>
+        <a target="_blank" rel="noopener noreferrer" href={props.project.projectGitHubLink}>
+          <IconButton>
+            <GitHubIcon style={{fill: "black"}}/>
+          </IconButton>
         </a>
         <IconButton
           className={clsx(classes.expand, {

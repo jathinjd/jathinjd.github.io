@@ -1,12 +1,8 @@
-.grid-container{
-    width: 100%;
-    background-color: pink;
-    margin: 0;
+.projects-content{
+    margin: 2em;
+    display: flex;
     justify-content: space-around;
-}
-
-#projects{
-    background-color: yellow;
+    flex-wrap: wrap;
 }
 
 .card-content{
@@ -19,7 +15,7 @@
 
 .card-technology-icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     overflow: hidden;
 }
 
@@ -30,7 +26,6 @@
 
 .card-header{
     height: 64px;
-    background-color: turquoise;
 }
 
 .project-card{

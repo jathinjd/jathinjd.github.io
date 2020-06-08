@@ -14,39 +14,11 @@ class Footer extends React.Component {
 
     render() {
 
-        const socialsList = [
-            {
-                socialName: "Gmail",
-                socialLink: "mailto:jathin57@gmail.com",
-                socailaIconName: <EmailIcon />
-            },
-            {
-                socialName: "LinkedIn",
-                socialLink: "https://www.linkedin.com/in/jathin-dhulipalla/",
-                socailaIconName: <LinkedInIcon />
-            },
-            {
-                socialName: "GitHub",
-                socialLink: "https://github.com/jathinjd",
-                socailaIconName: <GitHubIcon />
-            },
-            {
-                socialName: "Instagram",
-                socialLink: "https://www.instagram.com/jathin.jd/",
-                socailaIconName: <InstagramIcon />
-            },
-            {
-                socialName: "Facebook",
-                socialLink: "https://www.facebook.com/jathin.dhulipalla/",
-                socailaIconName: <FacebookIcon />
-            }
-        ]
-
-        const useStyles = {
+        /*const useStyles = {
             sectionClass: {
                 paddingTop: this.props.navbarHeight
             }
-        }
+        }*/
 
         return(
             <div className="footer-container" id="footer">
@@ -72,10 +44,10 @@ class Footer extends React.Component {
                     <Typography>Powered by: </Typography>
                     <div className="footer-social-links">
                         <a target="_blank" rel="noopener noreferrer" href="https://reactjs.org/">
-                            <LinkedInIcon style={{fill: "white"}} />
+                            <img src={require("../../images/technologies/react.svg")} alt="react"/>
                         </a>
                         <a target="_blank" rel="noopener noreferrer" href="https://material-ui.com/">
-                            <EmailIcon style={{fill: "white"}} />
+                            <img src={require("../../images/technologies/materialui.svg")} alt="material-ui"/>
                         </a>
                     </div>
                 </div>

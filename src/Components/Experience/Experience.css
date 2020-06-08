@@ -1,11 +1,8 @@
-#experience{
-    background-color: khaki;
-}
-
 .experience-cards{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2em;
 }
 
 .experience-card{
@@ -24,8 +21,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150px;
+    width: 200px;
+}
+
+.experience-card-logo img{
     width: 150px;
+    border-right: 1px solid #ddd;
+    padding: 1em;
 }
 
 .experience-card-information{

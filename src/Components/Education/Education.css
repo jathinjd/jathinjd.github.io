@@ -1,12 +1,8 @@
 .education-grid-container{
     width: 100%;
-    background-color: pink;
-    margin: 0;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
     justify-content: space-around;
-}
-
-#education{
-    background-color: yellow;
 }
 
 .education-card-content{
@@ -27,6 +23,7 @@
 }
 
 .education-pndts{
+    margin-top: 1em;
     display: flex;
     justify-content: space-between;
 }
@@ -39,6 +36,7 @@
 .education-card-bottom{
     display: flex;
     justify-content: space-between;
+    margin-left: 0.75em;
 }
 
 .education-card-bottom span{

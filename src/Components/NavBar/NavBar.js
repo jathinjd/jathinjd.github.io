@@ -1,7 +1,8 @@
 import React from 'react';
 import './NavBar.css';
 import { NavHashLink as NavLink } from 'react-router-hash-link';
-import { Button } from 'material-ui-core';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -18,44 +19,51 @@ class NavBar extends React.Component {
 
     render() {
         return(
-            <div id="navbar" className="navbar-container">
+            <div id="navbar" className="navbar-container" ref={this.welcomeLinkRef}>
                 <nav className="navbar-nav">
-                    <Button className='navlink-button' ref={this.welcomeLinkRef}>
-                        <NavLink to={'/#welcome'} smooth>
+                    {/*<Typography variant="h6" className='navlink-element'>
+                        <NavLink className="navlink-link" to={'/#welcome'} smooth>
                             Welcome
                         </NavLink>
-                    </Button>
-                    <Button className='navlink-button' ref={this.aboutmeLinkRef}>
-                        <NavLink to={'/#aboutme'} smooth>
+                    </Typography>*/}
+                    <Typography variant="h6" className='navlink-element' ref={this.aboutmeLinkRef}>
+                        <NavLink className="navlink-link" to={'/#aboutme'} smooth>
                             About Me
                         </NavLink>
-                    </Button>
-                    <Button className='navlink-button' ref={this.skillsLinkRef}>
-                        <NavLink to={'/#skills'} smooth>
+                    </Typography>
+                    <Typography variant="h6" className='navlink-element' ref={this.skillsLinkRef}>
+                        <NavLink className="navlink-link" to={'/#skills'} smooth>
                             Skills
                         </NavLink>
-                    </Button>
-                    <Button className='navlink-button' ref={this.educationLinkRef}>
-                        <NavLink to={'/#education'} smooth>
+                    </Typography>
+                    <Typography variant="h6" className='navlink-element' ref={this.educationLinkRef}>
+                        <NavLink className="navlink-link" to={'/#education'} smooth>
                             Education
                         </NavLink>
-                    </Button>
-                    <Button className='navlink-button' ref={this.experienceLinkRef}>
-                        <NavLink to={'/#experience'} smooth>
+                    </Typography>
+                    <Typography variant="h6" className='navlink-element' ref={this.experienceLinkRef}>
+                        <NavLink className="navlink-link" to={'/#experience'} smooth>
                             Experience
                         </NavLink>
-                    </Button>
-                    <Button className='navlink-button' ref={this.projectsLinkRef}>
-                        <NavLink to={'/#projects'} smooth>
+                    </Typography>
+                    <Typography variant="h6" className='navlink-element' ref={this.projectsLinkRef}>
+                        <NavLink className="navlink-link" to={'/#projects'} smooth>
                             Projects
                         </NavLink>
-                    </Button>
-                    <Button className='navlink-button' ref={this.contactLinkRef}>
-                        <NavLink to={'/#contact'} smooth>
+                    </Typography>
+                    <Typography variant="h6" className='navlink-element' ref={this.contactLinkRef}>
+                        <NavLink className="navlink-link" to={'/#contact'} smooth>
                             Contact
                         </NavLink>
-                    </Button>
+                    </Typography>
                 </nav>
+                <div className="navlink-right">
+                    <a target="_blank" rel="noopener noreferrer" href={require("../../util/files/resume.pdf")}>
+                        <Button variant="contained">
+                            <Typography className="navlink-right-text">Resume</Typography>
+                        </Button>
+                    </a>
+                </div>
             </div>
         )
     }

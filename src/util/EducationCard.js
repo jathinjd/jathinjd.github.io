@@ -7,7 +7,6 @@ import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
@@ -47,13 +46,13 @@ function EducationCard(props) {
       />
       <CardContent>
         <div className="education-card-main">
-            <p><Typography>{props.education.educationUniversity}</Typography></p>
+            <Typography variant="h6">{props.education.educationUniversity}</Typography>
             {props.education.educationDegrees.map((degree) => 
-                <p><Typography>{degree}</Typography></p>
+                <Typography><i>{degree}</i></Typography>
             )}
             <div className="education-pndts">
-                <span><p><Typography>{props.education.educationDate}</Typography></p></span>
-                <span><p><Typography>{props.education.educationPlace}</Typography></p></span>
+                <span><Typography>{props.education.educationDate}</Typography></span>
+                <span><Typography>{props.education.educationPlace}</Typography></span>
             </div>
         </div>
       </CardContent>
