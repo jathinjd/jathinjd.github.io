@@ -67,7 +67,7 @@ class App extends React.Component {
         <Router>
             <NavBar className="app-navbar" activeSection={"placeholder"} />
             <Switch>
-              <Route exact path="/me">
+              <Route exact path="/me/">
                 {
                   //ids for top element for each componenet are defined inside
                   //the render return's wrapping element. Respective id's:

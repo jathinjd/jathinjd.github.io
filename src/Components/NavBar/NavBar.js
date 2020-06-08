@@ -27,32 +27,32 @@ class NavBar extends React.Component {
                         </NavLink>
                     </Typography>*/}
                     <Typography variant="h6" className='navlink-element' ref={this.aboutmeLinkRef}>
-                        <NavLink className="navlink-link" to={'/#aboutme'} smooth>
+                        <NavLink className="navlink-link" to={'/me/#aboutme'} smooth>
                             About Me
                         </NavLink>
                     </Typography>
                     <Typography variant="h6" className='navlink-element' ref={this.skillsLinkRef}>
-                        <NavLink className="navlink-link" to={'/#skills'} smooth>
+                        <NavLink className="navlink-link" to={'/me/#skills'} smooth>
                             Skills
                         </NavLink>
                     </Typography>
                     <Typography variant="h6" className='navlink-element' ref={this.educationLinkRef}>
-                        <NavLink className="navlink-link" to={'/#education'} smooth>
+                        <NavLink className="navlink-link" to={'/me/#education'} smooth>
                             Education
                         </NavLink>
                     </Typography>
                     <Typography variant="h6" className='navlink-element' ref={this.experienceLinkRef}>
-                        <NavLink className="navlink-link" to={'/#experience'} smooth>
+                        <NavLink className="navlink-link" to={'/me/#experience'} smooth>
                             Experience
                         </NavLink>
                     </Typography>
                     <Typography variant="h6" className='navlink-element' ref={this.projectsLinkRef}>
-                        <NavLink className="navlink-link" to={'/#projects'} smooth>
+                        <NavLink className="navlink-link" to={'/me/#projects'} smooth>
                             Projects
                         </NavLink>
                     </Typography>
                     <Typography variant="h6" className='navlink-element' ref={this.contactLinkRef}>
-                        <NavLink className="navlink-link" to={'/#contact'} smooth>
+                        <NavLink className="navlink-link" to={'/me/#contact'} smooth>
                             Contact
                         </NavLink>
                     </Typography>
