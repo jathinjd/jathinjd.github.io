@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     padding: 0.5em;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 2em;
     padding-right: 2em;
 }

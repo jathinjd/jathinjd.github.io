@@ -12,7 +12,6 @@ class AboutMe extends React.Component {
     }
 
     render() {
-
         
         const useStyles = {
             sectionClass: {
