@@ -1,17 +1,27 @@
 {
   "files": {
-    "main.css": "/me/static/css/main.1efcf39f.chunk.css",
-    "main.js": "/me/static/js/main.9c782923.chunk.js",
-    "main.js.map": "/me/static/js/main.9c782923.chunk.js.map",
+    "main.css": "/me/static/css/main.8264b41e.chunk.css",
+    "main.js": "/me/static/js/main.2f2132f9.chunk.js",
+    "main.js.map": "/me/static/js/main.2f2132f9.chunk.js.map",
     "runtime-main.js": "/me/static/js/runtime-main.d5b3708e.js",
     "runtime-main.js.map": "/me/static/js/runtime-main.d5b3708e.js.map",
-    "static/js/2.1f4124e4.chunk.js": "/me/static/js/2.1f4124e4.chunk.js",
-    "static/js/2.1f4124e4.chunk.js.map": "/me/static/js/2.1f4124e4.chunk.js.map",
+    "static/js/2.13f7ef81.chunk.js": "/me/static/js/2.13f7ef81.chunk.js",
+    "static/js/2.13f7ef81.chunk.js.map": "/me/static/js/2.13f7ef81.chunk.js.map",
     "index.html": "/me/index.html",
-    "precache-manifest.f9934d1ce1a0b08d22057664cad5b732.js": "/me/precache-manifest.f9934d1ce1a0b08d22057664cad5b732.js",
+    "precache-manifest.95daf8f87c81356be45a777f84d2fda2.js": "/me/precache-manifest.95daf8f87c81356be45a777f84d2fda2.js",
     "service-worker.js": "/me/service-worker.js",
-    "static/css/main.1efcf39f.chunk.css.map": "/me/static/css/main.1efcf39f.chunk.css.map",
-    "static/js/2.1f4124e4.chunk.js.LICENSE.txt": "/me/static/js/2.1f4124e4.chunk.js.LICENSE.txt",
+    "static/css/main.8264b41e.chunk.css.map": "/me/static/css/main.8264b41e.chunk.css.map",
+    "static/js/2.13f7ef81.chunk.js.LICENSE.txt": "/me/static/js/2.13f7ef81.chunk.js.LICENSE.txt",
+    "static/media/1.gif": "/me/static/media/1.8db88425.gif",
+    "static/media/10.gif": "/me/static/media/10.2019f79b.gif",
+    "static/media/2.gif": "/me/static/media/2.ecd21396.gif",
+    "static/media/3.gif": "/me/static/media/3.7c341cb2.gif",
+    "static/media/4.gif": "/me/static/media/4.9ec6eff9.gif",
+    "static/media/5.gif": "/me/static/media/5.f62fb931.gif",
+    "static/media/6.gif": "/me/static/media/6.ddf81d69.gif",
+    "static/media/7.gif": "/me/static/media/7.b1503c44.gif",
+    "static/media/8.gif": "/me/static/media/8.73f1aa24.gif",
+    "static/media/9.gif": "/me/static/media/9.c2d07726.gif",
     "static/media/Heroku-icon.svg": "/me/static/media/Heroku-icon.a5c4fdd3.svg",
     "static/media/JavaScript-icon.svg": "/me/static/media/JavaScript-icon.a5c4fdd3.svg",
     "static/media/React-icon.svg": "/me/static/media/React-icon.a5c4fdd3.svg",
@@ -73,8 +83,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d5b3708e.js",
-    "static/js/2.1f4124e4.chunk.js",
-    "static/css/main.1efcf39f.chunk.css",
-    "static/js/main.9c782923.chunk.js"
+    "static/js/2.13f7ef81.chunk.js",
+    "static/css/main.8264b41e.chunk.css",
+    "static/js/main.2f2132f9.chunk.js"
   ]
 }
