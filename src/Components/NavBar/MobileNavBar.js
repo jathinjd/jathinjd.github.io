@@ -6,16 +6,15 @@ import CloseIcon from '@material-ui/icons/Close';
 import IconButton from '@material-ui/core/IconButton';
 import MenuRoundedIcon from '@material-ui/icons/MenuRounded';
 
+
 function closeMenu() {
-    if(document.getElementById("mobile-menu").classList.contains("navbar-mobile-menu")){
-        document.getElementById("mobile-menu").classList.replace("navbar-mobile-menu", "navbar-mobile-menu-closed");
-    }
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.style.height = "0";
 }
 
 function openMenu() {
-    if(document.getElementById("mobile-menu").classList.contains("navbar-mobile-menu-closed")){
-        document.getElementById("mobile-menu").classList.replace("navbar-mobile-menu-closed", "navbar-mobile-menu");
-    }
+    const mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.style.height = "100%"; 
 }
 
 function MobileNavBar() {
@@ -24,7 +23,7 @@ function MobileNavBar() {
             <IconButton onClick={openMenu}>
                 <MenuRoundedIcon />
             </IconButton>
-            <div id="mobile-menu" className="navbar-mobile-menu-closed">{/*open classname is navbar-mobile-menu*/}
+            <div id="mobile-menu" className="navbar-mobile-menu">{/*open classname is navbar-mobile-menu*/}
                 <IconButton id="mobile-menu-close">
                     <CloseIcon onClick={closeMenu} />
                 </IconButton>

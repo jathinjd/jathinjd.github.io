@@ -21,7 +21,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      navbarHeight: 0
+      navbarHeight: 0,
     }
   }
 
@@ -77,7 +77,7 @@ class App extends React.Component {
                 {/*<Welcome navbarHeight={this.state.navbarHeight}/>*/}
                 <AboutMe navbarHeight={this.state.navbarHeight}/>
                 <Skills navbarHeight={this.state.navbarHeight}/>
-                <Education navbarHeight={this.state.navbarHeight}/>
+                <Education navbarHeight={this.state.navbarHeight} className="roll-in"/>
                 <Experience navbarHeight={this.state.navbarHeight}/>
                 <Projects navbarHeight={this.state.navbarHeight}/>
                 <Contact navbarHeight={this.state.navbarHeight}/>
@@ -89,8 +89,6 @@ class App extends React.Component {
             <Footer />
         </Router>
         </MuiThemeProvider>
-        
-        
       </div>
     );
   }

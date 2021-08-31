@@ -26,8 +26,19 @@
 
 .experience-card-logo img{
     width: 150px;
-    border-right: 1px solid #ddd;
     padding: 1em;
+}
+
+@media screen and (max-width: 1024px){
+    .experience-card-logo img{
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    .experience-card-logo img{
+        border-right: 1px solid #ddd;
+    }
 }
 
 .experience-card-information{

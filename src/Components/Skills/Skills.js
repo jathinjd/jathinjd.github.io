@@ -6,7 +6,7 @@ import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { mainSkillsList, skillsList, otherSkillsList } from '../../util/data';
+import { featuredSkillsList, skillsList } from '../../util/data';
 
 class Skills extends React.Component {
     constructor(props) {
@@ -23,10 +23,10 @@ class Skills extends React.Component {
 
         return(
             <div className="section" id="skills" style={useStyles.sectionClass}>
-                <div className="skills-container">
+                <div className="skills-container" >
                     <Typography variant="h4">Skills</Typography>
                     <div className="skills-content">
-                        {mainSkillsList.map(skillsCategory => 
+                        {featuredSkillsList.map(skillsCategory => 
                             <Paper className="skills-section">
                                 <Typography variant="h6" className="skills-category-name">{skillsCategory.skillsCategoryName}</Typography>
                                 <div className="skills-items">
@@ -43,22 +43,6 @@ class Skills extends React.Component {
                             </Paper>
                         )}
                         {skillsList.map(skillsCategory => 
-                            <Paper className="skills-section">
-                                <Typography variant="h6" className="skills-category-name">{skillsCategory.skillsCategoryName}</Typography>
-                                <div className="skills-items">
-                                    {skillsCategory.skillsCategoryList.map(skillsItem =>
-                                        <div className="skills-item">
-                                            <img 
-                                                src={require("../../images/technologies/" + skillsItem.skillImageName + ".svg")}
-                                                alt={skillsItem.skillName}
-                                            />
-                                            <Typography>{skillsItem.skillName}</Typography>
-                                        </div>
-                                    )}
-                                </div>
-                            </Paper>
-                        )}
-                        {otherSkillsList.map(skillsCategory => 
                             <ExpansionPanel className="skills-section">
                                 <ExpansionPanelSummary
                                     expandIcon={<ExpandMoreIcon />}

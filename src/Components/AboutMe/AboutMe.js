@@ -1,7 +1,6 @@
 import React from 'react';
 import './AboutMe.css';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { interestsList, aboutMeText} from '../../util/data';
 
@@ -56,7 +55,7 @@ class AboutMe extends React.Component {
                                 </Typography>
                             </a>
                         </div>
-                        <div className="aboutme-download-item">
+                        {/*<div className="aboutme-download-item">
                             <a target="_blank" rel="noopener noreferrer" href={require("../../util/files/coverletter.pdf")}>
                                 <img 
                                     src={require("../../images/misc/pdf.svg")}
@@ -66,7 +65,7 @@ class AboutMe extends React.Component {
                                     Download Cover Letter
                                 </Typography>
                             </a>
-                        </div>
+                            </div>*/}
                     </Paper>
                 </div>
             </div>

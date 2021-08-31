@@ -31,6 +31,7 @@
 .education-card img{
     height: 300px;
     width: 300px;
+    border-bottom: 1px solid #ddd;
 }
 
 .education-card-bottom{

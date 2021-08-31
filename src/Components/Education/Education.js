@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 class Education extends React.Component {
     constructor(props) {
         super(props);
+        this.showRef = React.createRef(null);
     }
 
     render() {

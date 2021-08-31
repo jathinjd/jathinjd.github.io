@@ -7,28 +7,28 @@
 const socialsList = [
     {
         socialName: "Gmail",
-        socialLink: "mailto:jathin57@gmail.com",
-        socailaIconName: "",
+        socialLink: "mailto:jathin.dhulipalla@gmail.com",
+        socialIconName: "",
     },
     {
         socialName: "LinkedIn",
         socialLink: "https://www.linkedin.com/in/jathin-dhulipalla/",
-        socailaIconName: ""
+        socialIconName: ""
     },
     {
         socialName: "GitHub",
         socialLink: "https://github.com/jathinjd",
-        socailaIconName: ""
+        socialIconName: ""
     },
     {
         socialName: "Instagram",
         socialLink: "https://www.instagram.com/jathin.jd/",
-        socailaIconName: ""
+        socialIconName: ""
     },
     {
         socialName: "Facebook",
         socialLink: "https://www.facebook.com/jathin.dhulipalla/",
-        socailaIconName: ""
+        socialIconName: ""
     }
 ]
 
@@ -38,40 +38,46 @@ const interestsList = [
         interestImageName: "cloud",
     },
     {
-        interestName: "Full Stack Development",
-        interestImageName: "fullstackdev",
+        interestName: "Scalability",
+        interestImageName: "scalability",
     },
     {
-        interestName: "UI/UX",
-        interestImageName: "uiux",
+        interestName: "Full Stack Development",
+        interestImageName: "fullstackdev",
     }
 ];
 
-const aboutMeText = "I'm a recent graduate from Texas A&M University. I am passionate about full stack development and cloud computing. I enjoy problem solving, creating responsive, fast and reliable information systems.";
+const aboutMeText = "I am a Software Engineer with an emphasis on platform scalability and automation. My experience includes DevOps, building data pipelines and scalable applications.";
 
 //Skills Component
 
-const mainSkillsList = [
+const featuredSkillsList = [
     {
-        skillsCategoryName: "Languages",
+        skillsCategoryName: "Featured",
         skillsCategoryList: [
             {skillName: "Java", skillImageName: "java"},
-            {skillName: "JavaScript", skillImageName: "javascript"},
-            {skillName: "SQL", skillImageName: "sql"},
             {skillName: "Python", skillImageName: "python"},
-            {skillName: "R", skillImageName: "r"}
+            {skillName: "Kubernetes", skillImageName: "kubernetes"},
+            {skillName: "SQL", skillImageName: "sql"},
         ],
     }
 ]
 
 const skillsList = [
     {
+        skillsCategoryName: "Languages",
+        skillsCategoryList: [
+            {skillName: "Java", skillImageName: "java"},
+            {skillName: "JavaScript", skillImageName: "javascript"},
+            {skillName: "SQL", skillImageName: "sql"},
+            {skillName: "Python", skillImageName: "python"}
+        ],
+    },
+    {   
         skillsCategoryName: "Databases",
         skillsCategoryList: [
             {skillName: "MySQL", skillImageName: "mysql"},
             {skillName: "MongoDB", skillImageName: "mongodb"},
-            {skillName: "MariaDB", skillImageName: "mariadb"},
-            {skillName: "SQLite", skillImageName: "sqlite"},
             {skillName: "Microsoft SQL Server", skillImageName: "mssqlserver"}
         ],
     },
@@ -80,7 +86,7 @@ const skillsList = [
         skillsCategoryList: [
             {skillName: "React", skillImageName: "react"},
             {skillName: "Redux", skillImageName: "redux"},
-            {skillName: "Express.js", skillImageName: "expressjs"},
+            {skillName: "Spring Boot", skillImageName: "springboot"},
             {skillName: "HTML", skillImageName: "html"},
             {skillName: "CSS", skillImageName: "css"},
             {skillName: "Flask", skillImageName: "flask"},
@@ -91,14 +97,20 @@ const skillsList = [
         skillsCategoryName: "Cloud & Distributed",
         skillsCategoryList: [
             {skillName: "AWS", skillImageName: "aws"},
-            {skillName: "Apache Spark", skillImageName: "apachespark"},
-            {skillName: "Map Reduce", skillImageName: "mapreduce"},
-            {skillName: "HBase", skillImageName: "hbase"}
+            {skillName: "EC2", skillImageName: "aws-ec2"},
+            {skillName: "Lambda", skillImageName: "aws-lambda"},
+            {skillName: "Cloud Formation", skillImageName: "aws-cloudFormation"}
         ],
-    }
-]
-
-const otherSkillsList = [
+    },
+    {
+        skillsCategoryName: "Platform",
+        skillsCategoryList: [
+            {skillName: "Docker", skillImageName: "docker"},
+            {skillName: "Kubernetes", skillImageName: "kubernetes"},
+            {skillName: "Git", skillImageName: "git"},
+            {skillName: "Jenkins", skillImageName: "jenkins"}
+        ],
+    },
     {
         skillsCategoryName: "Other skills",
         skillsCategoryList: [
@@ -107,22 +119,7 @@ const otherSkillsList = [
             {skillName: "REST", skillImageName: "rest"},
             {skillName: "Agile", skillImageName: "agile"},
             {skillName: "Scrum", skillImageName: "scrum"},
-            {skillName: "UML", skillImageName: "uml"},
-            {skillName: "Robotic Process Automation", skillImageName: "rpa"},
-        ],
-    },
-    {
-        skillsCategoryName: "Tools",
-        skillsCategoryList: [
-            {skillName: "Git", skillImageName: "git"},
-            {skillName: "Bash / Command Line", skillImageName: "bash"},
-            {skillName: "Tableau", skillImageName: "tableau"},
-            {skillName: "Visual Studio Code", skillImageName: "vscode"},
-            {skillName: "IntelliJ IDEA", skillImageName: "intellijidea"},
-            {skillName: "PyCharm", skillImageName: "pycharm"},
-            {skillName: "Microsoft Excel", skillImageName: "excel"},
-            {skillName: "Microsoft Access", skillImageName: "access"},
-            {skillName: "Microsoft PowerPoint", skillImageName: "powerpoint"},
+            {skillName: "UML", skillImageName: "uml"}
         ],
     }
 ]
@@ -134,9 +131,9 @@ const educationList = [
         educationUniversity: "Texas A&M University",
         educationLocation: "College Station, Texas",
         educationDegrees: ["Master of Science in Management Information Systems"],
-        educationCourseWork: ["Analysis of Algorithms", "Advanced Data Management (NoSQL)", "Engineering Data Analysis (ML)", 
-        "IS Design and Development Project (Web Development, HCI, UX/UI)", "Advanced Systems Analysis and Design (UML, Agile)",
-        "Data Warehousing"],
+        educationCourseWork: ["Analysis of Algorithms", "Adv. Data Management (NoSQL)", 
+        "Engineering Data Analysis (ML)", "IS Design and Development (Full Stack Web App Development, HCI)", 
+        "Adv. Systems Analysis and Design (UML, Agile)", "Data Warehousing"],
         educationDate: "July 2018 - May 2020",
         educationPlace: "College Station, Texas",
         educationImageTitle: "tamu",
@@ -146,7 +143,7 @@ const educationList = [
         educationUniversity: "Birla Institute of Technology & Science, Pilani",
         educationLocation: "Hyderabad, India",
         educationDegrees: ["Bachelor of Engineering in Mechanical Engineering", "Master of Science in Physics"],
-        educationCourseWork: ["Computer Programming", "Probability & Statistics", "Computational Physics", "Engineering Optimization (Operations Research)"],
+        educationCourseWork: ["Computer Programming", "Probability & Statistics", "Computational Physics", "Computer Aided Design"],
         educationDate: "August 2012 - July 2017",
         educationPlace: "Hyderabad, India",
         educationImageTitle: "bits",
@@ -160,38 +157,38 @@ const experienceList = [
     {   
         experienceOrg: "TriNet",
         experienceImageName: "trinet",
-        experiencePosition: "Automation Intern",
+        experiencePosition: "Software Engineer II",
+        experienceLocation: "Austin, Texas",
+        experiencePeriod: "Since July 2020",
+        experienceDescription: ["Championed Connect360 product launch by developing a highly customizable and scalable Python application that triages all incoming customer requests to relevant business teams", 
+        "Ensured High Availability (99.4%) by packaging application and NLP dependency as multi-container Deployment", 
+        "Downsizing server footprint by 60% by migrating platform to AWS EC2 and leveraging Lambda service", 
+        "Initiated and collaborated on platform integrations between multiple systems reducing downtimes by over 80%",
+        "Streamlined SOX tracking by building CI/CD pipeline with Jenkins and Urbancode; integrated releases with Jira"]
+    },
+    /*{   
+        experienceOrg: "TriNet",
+        experienceImageName: "trinet",
+        experiencePosition: "Intern (CoE)",
         experienceLocation: "Reno, Nevada",
         experiencePeriod: "June 2019 - August 2019",
-        experienceDescription: ["Programmed Automation Anywhere bot for Benefits Analysis team which saved 48 person-hours each day",
-        "Optimized case triage assignment and generated workflows suitable for automation that could save $150,000 a year"]
-    },
+        experienceDescription: []
+    },*/
     {
         experienceOrg: "Gap Inc.",
         experienceImageName: "gapinc",
         experiencePosition: "Network Analyst",
         experienceLocation: "Hyderabad, India",
         experiencePeriod: "July 2017 - May 2018",
-        experienceDescription: ["Developed a JavaScript application to generate frequently used message templates to ensure faster and effective communication with multiple stakeholders for Level 2 IT Operations team",
-                                "Configured, managed, and monitored hub and spoke model routing and switching devices for N. America region",
-                                "Analyzed Gap data with SQL and Tableau to spot return trends and propose solutions to reduce 11% revenue loss"]
+        experienceDescription: ["Identified frequently occurring issues by building Tableau dashboards and pipeline from ServiceNow with Python",
+        "Automated basic troubleshooting and monitoring activities for incidents using cloud-based network device APIs",
+        "Facilitated reduction in hold times by creating a rule-based chatbot on JavaScript for helpdesk to cut times by 10%"]
     }
-];
+]
 
 //Projects Component
 
 const projectsList = [
-    {
-        projectTitle: "Spoons & Ladles: Web Application",
-        projectImageName: "spoonsnladles",
-        projectDescription: "Write a brief desc",
-        projectDetails: ["Full Stack Web Application created with React.js and redux that looks up recipes based on selected ingredients",
-         "Features HCI design elements with SQL database hosted on AWS and backend deployed on Spring framework"],
-        projectTechnologies: ["React", "Redux", "JavaScript", "HTML", "CSS", "Spring Boot", "AWS", "HTML", "CSS"],
-        projectTechnologiesImageName: ["react", "redux", "javascript", "springboot", "aws"/*, "html", "css"*/],
-        projectLink: "https://spoons-and-ladles.netlify.app/",
-        projectGitHubLink: "https://github.com/aish-m/spoons-and-ladles"
-    },
     {
         projectTitle: "Library Analysis Application",
         projectImageName: "seattlelibrary",
@@ -204,28 +201,39 @@ const projectsList = [
         projectGitHubLink: "https://github.com/jathinjd/seattle-library-analysis"
     },
     {
-        projectTitle: "CIFAR 10 - Image Classification",
+        projectTitle: "Smart Cooking: Spoons & Ladles",
+        projectImageName: "spoonsnladles",
+        projectDescription: "Write a brief desc",
+        projectDetails: ["Website enabled recipe finding by ingredients, posting recipes, signups, authentication, and access management",
+        "Designed web application focusing on HCI principles with frontend made on React and hosted on Netlify; backend was set up with Spring Boot deployed on Heroku and MySQL database on EC2"],
+        projectTechnologies: ["React", "Redux", "JavaScript", "HTML", "CSS", "Spring Boot", "AWS"],
+        projectTechnologiesImageName: ["react", "redux", "javascript", "springboot", "aws"/*, "html", "css"*/],
+        projectLink: "https://spoons-and-ladles.netlify.app/",
+        projectGitHubLink: "https://github.com/aish-m/spoons-and-ladles"
+    },
+    {
+        projectTitle: "Image Classification",
         projectImageName: "cifar",
         projectDescription: "Write a brief desc",
-        projectDetails: ["Performed data pre-processing with Principal Component Analysis to identify features that explain 95% variance",
-         "Trained dataset with different ML models and used the validation set approach to achieve 52% accuracy with QDA"],
+        projectDetails: ["Quantitative and qualitative analysis of non-neural network models (SVM, QDA, Boosting, Random Forest) after identifying features explaining 95% variance using PCA and obtained 52% accuracy with QDA",
+        "Finally trained CNN model with data augmentation, batch normalization, and dropout for obtaining 72% accuracy"],
         projectTechnologies: ["R", "Validation Set Approach", "Unsupervised and Supervised Learning"],
         projectTechnologiesImageName: ["r"],
         projectLink: "Link here",
         projectGitHubLink: "https://github.com/jathinjd/cifar10-image-classification"
     },
     {
-        projectTitle: "Network Optimization: Radom Graph Generation and Maximum Bandwidth Paths",
+        projectTitle: "Algorithm Performance for Networks",
         projectImageName: "networkopt",
         projectDescription: "Write a brief desc",
-        projectDetails: ["Developed algorithms for generating dense (20% adjacency) and sparse (average degree of 6) graphs of 5000 vertices", 
-            "Generated maximum bandwidth paths using Dijkstra and Kruskal algorithms, and reduced time complexity with Heap data structure implementation"],
+        projectDetails: ["Developed application in Java to analyze the performance of graph algorithms in random dense and sparse networks",
+        "Process involved generating graphs of various densities and assessing single source and MST computation times"],
         projectTechnologies: ["Java", "Data Structures", "Algorithms", "Grpah Theory", "Object Oriented Programming", "Dijkstra's Algorithm", "Kruskal's Algorithm"],
         projectTechnologiesImageName: ["java", "intellijidea"],
         projectLink: "Link here",
         projectGitHubLink: "https://github.com/jathinjd/networkopt-graphalgo"
     }
-];
+]
 
 //Contact Component
 
@@ -236,9 +244,8 @@ const projectsList = [
 export { 
     interestsList, 
     aboutMeText, 
-    mainSkillsList, 
-    skillsList, 
-    otherSkillsList, 
+    featuredSkillsList, 
+    skillsList,
     educationList,
     experienceList,
     projectsList,
