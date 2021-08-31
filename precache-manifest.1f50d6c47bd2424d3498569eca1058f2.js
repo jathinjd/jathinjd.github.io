@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a2749122d629379fe78de11a1fe47894",
+    "revision": "6a46e4da018818015a2f6b7430745da5",
     "url": "/me/index.html"
   },
   {
-    "revision": "bd3a9634367cccfc30ce",
-    "url": "/me/static/css/main.8264b41e.chunk.css"
+    "revision": "7f5f11283757d067411c",
+    "url": "/me/static/css/main.d0b9fddf.chunk.css"
   },
   {
-    "revision": "4201427bb52022d87230",
-    "url": "/me/static/js/2.13f7ef81.chunk.js"
+    "revision": "cabf076ee3677e692d8b",
+    "url": "/me/static/js/2.08be3c09.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/me/static/js/2.13f7ef81.chunk.js.LICENSE.txt"
+    "url": "/me/static/js/2.08be3c09.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bd3a9634367cccfc30ce",
-    "url": "/me/static/js/main.2f2132f9.chunk.js"
+    "revision": "7f5f11283757d067411c",
+    "url": "/me/static/js/main.1031c3a6.chunk.js"
   },
   {
     "revision": "069478ab5bc2249b1903",
@@ -80,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/me/static/media/Redux-icon.a5c4fdd3.svg"
   },
   {
+    "revision": "c7d8cf1c78c15da8681eb95c390fe99e",
+    "url": "/me/static/media/TriNet.c7d8cf1c.svg"
+  },
+  {
     "revision": "bebcdd4b1e2c419e21be7669322e89cc",
     "url": "/me/static/media/access.bebcdd4b.svg"
   },
@@ -90,6 +94,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f60cae062249fa115ae09c803a1b3934",
     "url": "/me/static/media/apachespark.f60cae06.svg"
+  },
+  {
+    "revision": "80229d2f7c2c6aee55eeff9e5d967077",
+    "url": "/me/static/media/aws-cloudFormation.80229d2f.svg"
+  },
+  {
+    "revision": "e12665249d21ff8d13772b70ec2f43ff",
+    "url": "/me/static/media/aws-ec2.e1266524.svg"
+  },
+  {
+    "revision": "75de55c884198b886a76720e4c797e55",
+    "url": "/me/static/media/aws-lambda.75de55c8.svg"
   },
   {
     "revision": "5830aea31048886122a87b581cfe1c81",
@@ -112,16 +128,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/me/static/media/cloud.5eb8d5ff.svg"
   },
   {
-    "revision": "48240f9869be9ab45750c855e9ab3b72",
-    "url": "/me/static/media/coverletter.48240f98.pdf"
-  },
-  {
     "revision": "b1d1fae6da121ccb5d5c662dcad8da5a",
     "url": "/me/static/media/css.b1d1fae6.svg"
   },
   {
-    "revision": "25e57e31f65395c64fe1778c0bbde939",
-    "url": "/me/static/media/displaypic.25e57e31.jpg"
+    "revision": "1dce413b0422541bfb0fc402e80589d0",
+    "url": "/me/static/media/displaypic.1dce413b.jpg"
+  },
+  {
+    "revision": "3d0bf3c164d58ec25ddbee0f268f6497",
+    "url": "/me/static/media/docker.3d0bf3c1.svg"
   },
   {
     "revision": "b3874c6fd55228d1bba8afa5bb5eb6e9",
@@ -166,6 +182,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "61ed8b054178d0e8d1285ad8f29f4045",
     "url": "/me/static/media/javascript.61ed8b05.svg"
+  },
+  {
+    "revision": "d180cf32f1f4869d598648ac1ead6791",
+    "url": "/me/static/media/jenkins.d180cf32.svg"
+  },
+  {
+    "revision": "506db519cafad800a7d0e30c7adbdcb4",
+    "url": "/me/static/media/kubernetes.506db519.svg"
   },
   {
     "revision": "4f870e593a26a8e3f6b86ee1ebde3bec",
@@ -236,12 +260,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/me/static/media/rest.8a3e25d8.svg"
   },
   {
-    "revision": "8d2b71ac82d45f97d0a5202d93f8293f",
-    "url": "/me/static/media/resume.8d2b71ac.pdf"
+    "revision": "812202f0577d2cea4f8395c656332773",
+    "url": "/me/static/media/resume.812202f0.pdf"
   },
   {
     "revision": "81a8bfb7ec75edb9ecdb330c15d0dc78",
     "url": "/me/static/media/rpa.81a8bfb7.svg"
+  },
+  {
+    "revision": "7962baf06ba34fed2e3324632d2ca4e9",
+    "url": "/me/static/media/scalability.7962baf0.svg"
   },
   {
     "revision": "ba9ee3d8d68df706f9655eb74e5adc3e",
@@ -274,10 +302,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7cd622958cdd6772df3bad8844c323e0",
     "url": "/me/static/media/tamu.7cd62295.svg"
-  },
-  {
-    "revision": "c7d8cf1c78c15da8681eb95c390fe99e",
-    "url": "/me/static/media/trinet.c7d8cf1c.svg"
   },
   {
     "revision": "3a879e34a44c96410de6ba0b14b41df9",
