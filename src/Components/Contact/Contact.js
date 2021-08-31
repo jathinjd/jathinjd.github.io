@@ -110,7 +110,7 @@ class Contact extends React.Component {
                         <Typography>Would love to hear about opportunites, collaborations, ideas and feedback. Find me here...</Typography>
                     </div>
                     <div className="contact-body">
-                        <div className="contact-form">
+                        {/*<div className="contact-form">
                             <TextField
                                 className="form-contact-inp"
                                 label="Full Name *"
@@ -152,23 +152,23 @@ class Contact extends React.Component {
                             }}>
                                 <Typography className="button-text">Send</Typography>
                             </ColorButton>
-                        </div>
+                        </div>*/}
                         <div className="contact-content">
                             <div className="contact-item">
                                 <Typography className="contact-method">Email:</Typography>
                                 <div className="contact-address">
-                                    <a href="mailto:jathin57@gmail.com">
+                                    <a href="mailto:jathin.dhulipalla@gmail.com">
                                         <EmailIcon />
-                                        <Typography>jathin57@gmail.com</Typography>
+                                        <Typography>jathin.dhulipalla@gmail.com</Typography>
                                     </a>
                                 </div>
                             </div>
                             <div className="contact-item">
                                 <Typography className="contact-method">LinkedIn:</Typography>
                                 <div className="contact-address">
-                                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jathin-dhulipalla/">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jathind/">
                                         <LinkedInIcon />
-                                        <Typography>/jathin-dhulipalla</Typography>
+                                        <Typography>/jathind</Typography>
                                     </a>
                                 </div>
                             </div>

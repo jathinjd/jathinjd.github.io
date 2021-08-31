@@ -24,7 +24,7 @@ class Footer extends React.Component {
             <div className="footer-container" id="footer">
                 <Typography>&copy; 2021 Jathin Dhulipalla.</Typography>
                 <div className="footer-social-links">
-                    <a href="mailto:jathin57@gmail.com">
+                    <a href="mailto:jathin.dhulipalla@gmail.com">
                         <EmailIcon style={{fill: "white"}} />
                     </a>
                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jathin-dhulipalla/">
