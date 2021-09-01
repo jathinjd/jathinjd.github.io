@@ -235,6 +235,26 @@ const projectsList = [
     }
 ]
 
+const contactTemplate = {
+    emailjs_userID: "user_k3uLm2i6ZCv1CFM5HGX4F",
+    alertEmail: {
+        emailjs_serviceID: "profileContactService",
+        emailjs_templateID: "template_alert",
+        alert_subject: "JathinJD Website Contact ALert!",
+        alert_message: "",
+        my_email: "jathin.dhulipalla@gmail.com",
+        my_name: "Jathin Dhulipalla"
+    },
+    autoResponseEmail: {
+        emailjs_serviceID: "profileContactService",
+        emailjs_templateID: "template_auto_reply",
+        auto_reply_subject: "Thank you for reaching out -Jathin Dhulipalla",
+        auto_reply_message: "",
+        my_name: "Jathin Dhulipalla",
+        my_email: "jathin.dhulipalla@gmail.com"
+    }
+}
+
 //Contact Component
 
 //Footer Component
@@ -249,4 +269,5 @@ export {
     educationList,
     experienceList,
     projectsList,
+    contactTemplate
 };

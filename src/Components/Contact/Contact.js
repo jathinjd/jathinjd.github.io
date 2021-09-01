@@ -11,7 +11,8 @@ import EmailIcon from '@material-ui/icons/Email';
 import { withStyles } from '@material-ui/core/styles';
 import { grey } from '@material-ui/core/colors';
 import validator from 'validator';
-import { options } from 'yargs';
+import emailjs from 'emailjs-com';
+import { contactTemplate } from '../../util/data';
 
 class Contact extends React.Component {
     constructor(props) {
@@ -29,11 +30,12 @@ class Contact extends React.Component {
             filledEmail: false,
             filledPhone: false,
             filledMessage: false
-        }
-        this.handleChangeName = this.handleChangeName.bind(this)
-        this.handleChangeEmail = this.handleChangeEmail.bind(this)
-        this.handleChangePhone = this.handleChangePhone.bind(this)
-        this.handleChangeMessage = this.handleChangeMessage.bind(this)
+        };
+        this.handleChangeName = this.handleChangeName.bind(this);
+        this.handleChangeEmail = this.handleChangeEmail.bind(this);
+        this.handleChangePhone = this.handleChangePhone.bind(this);
+        this.handleChangeMessage = this.handleChangeMessage.bind(this);
+        this.handleFormSubmit = this.handleFormSubmit.bind(this);
     }
 
     handleChangeName(eve) {
@@ -84,6 +86,42 @@ class Contact extends React.Component {
         }
     }
 
+    handleFormSubmit(eve) {
+        if(this.state.validName && this.state.validEmail && this.state.validMessage) {
+            const emailjsTemplParamAlert = {
+                my_email: contactTemplate.alertEmail.my_email,
+                senders_name: this.state.fullName,
+                senders_email: this.state.email,
+                senders_message: this.state.message,
+                alert_subject: contactTemplate.alertEmail.alert_subject,
+                senders_phone: this.state.phone
+            }
+            emailjs.send(contactTemplate.alertEmail.emailjs_serviceID, contactTemplate.alertEmail.emailjs_templateID, emailjsTemplParamAlert, contactTemplate.emailjs_userID)
+                .then(((response) => {
+                    console.log("Alert email sent");
+                }, (error) => {
+                    console.log("Failed");
+            }));
+            
+            const emailjsTemplParamResponse = {
+                my_name: contactTemplate.autoResponseEmail.my_name,
+                senders_name: this.state.fullName,
+                senders_email: this.state.email,
+                my_email: contactTemplate.autoResponseEmail.my_email,
+                auto_reply_subject: contactTemplate.autoResponseEmail.auto_reply_subject
+            }
+            emailjs.send(contactTemplate.autoResponseEmail.emailjs_serviceID, contactTemplate.autoResponseEmail.emailjs_templateID, emailjsTemplParamResponse, contactTemplate.emailjs_userID)
+                .then(((response) => {
+                    console.log("Reponse email sent");
+                }, (error) => {
+                    console.log("Response email Failed");
+            }));
+        }
+        else{
+            console.log("oops");
+        }
+    }
+
     render() {
 
         const useStyles = {
@@ -110,7 +148,7 @@ class Contact extends React.Component {
                         <Typography>Would love to hear about opportunites, collaborations, ideas and feedback. Find me here...</Typography>
                     </div>
                     <div className="contact-body">
-                        {/*<div className="contact-form">
+                        <div className="contact-form">
                             <TextField
                                 className="form-contact-inp"
                                 label="Full Name *"
@@ -147,12 +185,10 @@ class Contact extends React.Component {
                             <ColorButton 
                                 className="form-button"
                                 variant="contained"
-                                onClick={() => {
-                                    alert('clicked')
-                            }}>
+                                onClick={this.handleFormSubmit}>
                                 <Typography className="button-text">Send</Typography>
                             </ColorButton>
-                        </div>*/}
+                        </div>
                         <div className="contact-content">
                             <div className="contact-item">
                                 <Typography className="contact-method">Email:</Typography>
