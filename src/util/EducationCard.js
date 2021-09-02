@@ -58,7 +58,7 @@ function EducationCard(props) {
       </CardContent>
       <CardActions disableSpacing className="education-card-bottom">
         <span>
-            <p><Typography>GPA: {props.education.educationGPA}</Typography></p>
+            <p>{/*<Typography>GPA: {props.education.educationGPA}</Typography>*/}</p>
         </span>
         <span>
             <p><Typography>Coursework</Typography></p>

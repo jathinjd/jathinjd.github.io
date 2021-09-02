@@ -14,6 +14,32 @@ import validator from 'validator';
 import emailjs from 'emailjs-com';
 import { contactTemplate } from '../../util/data';
 
+function FormFeedbck(props) {
+    const gifNum = Math.floor(Math.random() * 5) + 1;
+    if(props.status === "es")
+        return (
+            <div class="formFeedbackContainer">
+                <Typography>Thank you for the message, {props.name}. I will get in touch as soon as I can.</Typography>
+                <img
+                    src={require("../../images/contactSuccess/" + gifNum + ".gif")}
+                    alt="Form Sent!"
+                />
+            </div>
+        );
+    else if(props.status === "ef")
+        return (
+            <div class="formFeedbackContainer">
+                <Typography>Oops... Somthing doesn't seem right. Please use my email address for now. Thank you!</Typography>
+                <img
+                    src={require("../../images/contactFail/" + 1 + ".gif")}
+                    alt="Contact Form Failed!"
+                />
+            </div>
+        );
+    else 
+        return <Typography></Typography>;
+}
+
 class Contact extends React.Component {
     constructor(props) {
         super(props)
@@ -29,7 +55,8 @@ class Contact extends React.Component {
             filledName: false,
             filledEmail: false,
             filledPhone: false,
-            filledMessage: false
+            filledMessage: false,
+            contactFormUsed: ""
         };
         this.handleChangeName = this.handleChangeName.bind(this);
         this.handleChangeEmail = this.handleChangeEmail.bind(this);
@@ -42,11 +69,10 @@ class Contact extends React.Component {
         const curstr = String(eve.target.value)
         if(validator.matches(curstr,/^[A-Za-z ]+$/i) && (curstr.length >= 2 && curstr.length <= 35)){
             this.setState({validName: true, filledName: true, fullName: eve.target.value});
+        } else if(curstr === null || curstr === "") {
+            this.setState({validName: true, filledName: false});
         } else {
-            this.setState({validName: false, filledName: false, fullName: ""});
-        }
-        if(curstr === null || curstr === "") {
-            this.setState({validName: true, filledName: false, fullName: ""});
+            this.setState({validName: false, filledName: false});
         }
     }
 
@@ -54,11 +80,10 @@ class Contact extends React.Component {
         const curstr = String(eve.target.value)
         if(validator.isEmail(curstr)){
             this.setState({validEmail: true, filledEmail: true, email: eve.target.value});
+        } else if(curstr === null || curstr === "") {
+            this.setState({validEmail: true, filledEmail: false});
         } else {
-            this.setState({validEmail: false, filledEmail: false, email: ""});
-        }
-        if(curstr === null || curstr === "") {
-            this.setState({validEmail: true, filledEmail: false, email: ""});
+            this.setState({validEmail: false, filledEmail: false});
         }
     }
 
@@ -66,11 +91,10 @@ class Contact extends React.Component {
         const curstr = String(eve.target.value)
         if(validator.isMobilePhone(curstr)){
             this.setState({validPhone: true, filledPhone: true, phone: eve.target.value});
+        } else if(curstr === null || curstr === "") {
+            this.setState({validPhone: true, filledPhone: false});
         } else {
-            this.setState({validPhone: false, filledPhone: false, phone: ""});
-        }
-        if(curstr === null || curstr === "") {
-            this.setState({validPhone: true, filledPhone: false, phone: ""});
+            this.setState({validPhone: false, filledPhone: false});
         }
     }
 
@@ -78,47 +102,54 @@ class Contact extends React.Component {
         const curstr = String(eve.target.value)
         if(curstr.length > 10 && curstr.length <= 500){
             this.setState({validMessage: true, filledMessage: true, message: eve.target.value});
+        } else if (curstr === null || curstr === "") {
+            this.setState({validMessage: true, filledMessage: false});
         } else {
-            this.setState({validMessage: false, filledMessage: false, message: ""});
-        }
-        if(curstr === null || curstr === "") {
-            this.setState({validMessage: true, filledMessage: false, message: ""});
+            this.setState({validMessage: false, filledMessage: false});
         }
     }
 
-    handleFormSubmit(eve) {
-        if(this.state.validName && this.state.validEmail && this.state.validMessage) {
-            const emailjsTemplParamAlert = {
-                my_email: contactTemplate.alertEmail.my_email,
-                senders_name: this.state.fullName,
-                senders_email: this.state.email,
-                senders_message: this.state.message,
-                alert_subject: contactTemplate.alertEmail.alert_subject,
-                senders_phone: this.state.phone
-            }
-            emailjs.send(contactTemplate.alertEmail.emailjs_serviceID, contactTemplate.alertEmail.emailjs_templateID, emailjsTemplParamAlert, contactTemplate.emailjs_userID)
-                .then(((response) => {
-                    console.log("Alert email sent");
-                }, (error) => {
-                    console.log("Failed");
-            }));
-            
-            const emailjsTemplParamResponse = {
-                my_name: contactTemplate.autoResponseEmail.my_name,
-                senders_name: this.state.fullName,
-                senders_email: this.state.email,
-                my_email: contactTemplate.autoResponseEmail.my_email,
-                auto_reply_subject: contactTemplate.autoResponseEmail.auto_reply_subject
-            }
-            emailjs.send(contactTemplate.autoResponseEmail.emailjs_serviceID, contactTemplate.autoResponseEmail.emailjs_templateID, emailjsTemplParamResponse, contactTemplate.emailjs_userID)
-                .then(((response) => {
-                    console.log("Reponse email sent");
-                }, (error) => {
-                    console.log("Response email Failed");
-            }));
+    handleFormSubmit(eve) { 
+        const emailjsTemplParamAlert = {
+            my_email: contactTemplate.alertEmail.my_email,
+            senders_name: this.state.fullName,
+            senders_email: this.state.email,
+            senders_message: this.state.message,
+            alert_subject: contactTemplate.alertEmail.alert_subject,
+            senders_phone: this.state.phone
         }
-        else{
-            console.log("oops");
+        const emailjsTemplParamResponse = {
+            my_name: contactTemplate.autoResponseEmail.my_name,
+            senders_name: this.state.fullName,
+            senders_email: this.state.email,
+            my_email: contactTemplate.autoResponseEmail.my_email,
+            auto_reply_subject: contactTemplate.autoResponseEmail.auto_reply_subject
+        }
+
+        let bothSuccess = true;
+
+        emailjs.send(contactTemplate.alertEmail.emailjs_serviceID, contactTemplate.alertEmail.emailjs_templateID, emailjsTemplParamAlert, contactTemplate.emailjs_userID)
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                bothSuccess = false;
+                console.log(error);
+        });
+        
+        emailjs.send(contactTemplate.autoResponseEmail.emailjs_serviceID, contactTemplate.autoResponseEmail.emailjs_templateID, emailjsTemplParamResponse, contactTemplate.emailjs_userID)
+            .then((response) => {
+                console.log(response);
+            })
+            .catch((error) => {
+                bothSuccess = false;
+                console.log(error);
+        });
+
+        if(!bothSuccess) {
+            this.setState({contactFormUsed: "ef"});
+        } else {
+            this.setState({contactFormUsed: "es"});
         }
     }
 
@@ -155,7 +186,7 @@ class Contact extends React.Component {
                                 placeholder="Full Name"
                                 variant="outlined"
                                 onChange={this.handleChangeName}
-                                error={!this.state.validName}                   
+                                error={!this.state.validName}      
                             />
                             <TextField
                                 className="form-contact-inp"
@@ -185,9 +216,11 @@ class Contact extends React.Component {
                             <ColorButton 
                                 className="form-button"
                                 variant="contained"
+                                disabled={(this.state.contactFormUsed !== "") || !(this.state.validName && this.state.validEmail && this.state.validMessage && this.state.filledMessage && this.state.filledName && this.state.filledEmail)}
                                 onClick={this.handleFormSubmit}>
                                 <Typography className="button-text">Send</Typography>
                             </ColorButton>
+                            <FormFeedbck status={this.state.contactFormUsed} name={this.state.fullName}/>
                         </div>
                         <div className="contact-content">
                             <div className="contact-item">
