@@ -199,7 +199,7 @@ class Contact extends React.Component {
                             <TextField
                                 className="form-contact-inp"
                                 label="Phone"
-                                placeholder="000-000-0000"
+                                placeholder="0000000000"
                                 variant="outlined"
                                 onChange={this.handleChangePhone}
                                 error={!this.state.validPhone}
