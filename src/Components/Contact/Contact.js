@@ -29,7 +29,8 @@ function FormFeedbck(props) {
     else if(props.status === "ef")
         return (
             <div class="formFeedbackContainer">
-                <Typography>Oops... Somthing doesn't seem right. Please use my email address for now. Thank you!</Typography>
+                <Typography>Oops... Somthing doesn't seem right. Please use my email address, 
+                    {contactTemplate.autoResponseEmail.my_email} or any other form of contact below for now. Thank you!</Typography>
                 <img
                     src={require("../../images/contactFail/" + 1 + ".gif")}
                     alt="Contact Form Failed!"
@@ -222,13 +223,13 @@ class Contact extends React.Component {
                             </ColorButton>
                             <FormFeedbck status={this.state.contactFormUsed} name={this.state.fullName}/>
                         </div>
-                        <div className="contact-content">
+                        {/*<div className="contact-content">
                             <div className="contact-item">
                                 <Typography className="contact-method">Email:</Typography>
                                 <div className="contact-address">
                                     <a href="mailto:jathin.dhulipalla@gmail.com">
-                                        <EmailIcon />
-                                        <Typography>jathin.dhulipalla@gmail.com</Typography>
+                                        <EmailIcon inline />
+                                        <Typography inline>jathin.dhulipalla@gmail.com</Typography>
                                     </a>
                                 </div>
                             </div>
@@ -236,8 +237,8 @@ class Contact extends React.Component {
                                 <Typography className="contact-method">LinkedIn:</Typography>
                                 <div className="contact-address">
                                     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jathind/">
-                                        <LinkedInIcon />
-                                        <Typography>/jathind</Typography>
+                                        <LinkedInIcon inline />
+                                        <Typography inline>/jathind</Typography>
                                     </a>
                                 </div>
                             </div>
@@ -259,7 +260,7 @@ class Contact extends React.Component {
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div>*/}
                     </div>
                 </Paper>
             </div>

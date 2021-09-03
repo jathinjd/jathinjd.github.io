@@ -3,6 +3,18 @@
   padding: 0px;
 }
 
+html {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
 .section{
   width: 100%;
   text-align: center;
