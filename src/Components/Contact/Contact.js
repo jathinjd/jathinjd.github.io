@@ -177,7 +177,7 @@ class Contact extends React.Component {
                 <Paper className="contact-container">
                     <div className="contact-head">
                         <Typography className="conatct-title" variant="h4">Contact Me</Typography>
-                        <Typography>Would love to hear about opportunites, collaborations, ideas and feedback. Find me here...</Typography>
+                        <Typography>Would love to hear about opportunites, collaborations, ideas and feedback. Say hi...</Typography>
                     </div>
                     <div className="contact-body">
                         <div className="contact-form">
