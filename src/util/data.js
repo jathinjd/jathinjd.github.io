@@ -12,7 +12,7 @@ const socialsList = [
     },
     {
         socialName: "LinkedIn",
-        socialLink: "https://www.linkedin.com/in/jathin-dhulipalla/",
+        socialLink: "https://www.linkedin.com/in/jathind/",
         socialIconName: ""
     },
     {

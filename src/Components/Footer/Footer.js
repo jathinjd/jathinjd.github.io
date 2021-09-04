@@ -27,7 +27,7 @@ class Footer extends React.Component {
                     <a href="mailto:jathin.dhulipalla@gmail.com">
                         <EmailIcon style={{fill: "white"}} />
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jathin-dhulipalla/">
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/jathind/">
                         <LinkedInIcon style={{fill: "white"}} />
                     </a>
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/jathinjd">
